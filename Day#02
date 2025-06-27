@@ -1,0 +1,75 @@
+✅ 90 Days of DevOps Challenge - Week 2, Day 2 Completed!
+
+Today’s mission: Mastering File & Directory Permissions in Linux 🚀
+
+🔍 Task Summary:
+
+📁 Create /devops_workspace directory📝 Inside it, create a file project_notes.txt🔐 Set permissions so that:
+
+Owner can edit (read/write)
+
+Group can only read
+
+Others have no access
+
+🏋️ Step-by-Step Implementation:
+
+Created the workspace directory
+
+sudo mkdir /devops_workspace
+
+Moved inside the directory and created the file
+
+cd /devops_workspace
+sudo touch project_notes.txt
+
+Changed the file owner to my current user
+
+sudo chown empdmin:empdmin project_notes.txt
+
+Set the correct permissions
+
+sudo chmod 640 project_notes.txt
+
+Verified permissions using ls -l
+
+-rw-r----- 1 empdmin empdmin 0 Jun 26 18:24 project_notes.txt
+
+🔓 Permission Breakdown (chmod 640):
+
+User Type
+
+Permission
+
+Meaning
+
+Owner
+
+rw-
+
+Read & Write
+
+Group
+
+r--
+
+Read Only
+
+Others
+
+---
+
+No Access
+
+✅ Perfectly aligned with DevOps security practices!
+
+📄 GitHub Progress Repo:Explore my daily commits and progress: Linux-TWS GitHub Repo
+
+📈 Learning Resource:This task is part of the powerful 90 Days of DevOps program by the inspiring @Shubham Londhe Sir 🙌
+
+Big shoutout to Shubham Sir for making Linux this simple, practical, and fun! 🎯
+
+🚀 Let’s connect and grow in DevOps together!
+
+#DevOps #Linux #FilePermissions #chmod #chown #90DaysOfDevOps #ShubhamLondhe #WomenInTech #OpenSource #LearningInPublic #GitHubReadMe #TerminalLife #LinkedInTech
+
