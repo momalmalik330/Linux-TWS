@@ -1,0 +1,48 @@
+✅ 90 Days of DevOps Challenge - Week 2, Day 3 Completed!
+
+Today’s task: Become a Log Analysis Ninja 🥷📜
+
+🧠 Task Summary:
+
+🔽 Download the log file from the repository🔍 Use grep to find all occurrences of the word "error"⏱ Use awk to extract timestamps and log levels🛡 Use sed to mask IP addresses with [REDACTED]🎯 Bonus: Find most frequent log entries!
+
+⚙️ Commands I Used:
+
+🔍 Step 1: Finding all errors
+
+grep -i "error" Linux_2k.log
+
+⏱ Step 2: Extracting timestamps & log levels
+
+awk '{print $1, $2, $3}' Linux_2k.log
+
+(Assuming first 3 fields are timestamp and level)
+
+🛡 Step 3: Hiding IP addresses for security
+
+sed -E 's/[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+/[REDACTED]/g' Linux_2k.log > safe_log.log
+
+🎯 Bonus Step: Most frequent entries
+
+sort Linux_2k.log | uniq -c | sort -nr | head -10
+
+🧾 Why This Matters in DevOps?
+
+Logs = Heartbeat of your infrastructure 💓
+
+grep saves HOURS when hunting production bugs 🐞
+
+awk formats logs like magic 📊
+
+sed secures sensitive data like a firewall 🛡
+
+Log analysis teaches you to read the mind of your servers. No tool is more powerful than the terminal in the hands of a DevOps engineer 💪💻
+
+📂 My GitHub Repo:Explore all my tasks & commands ➡️ Linux-TWS GitHub Repo
+
+🔥 Special Thanks:Big love to @Shubham Londhe Sir for the amazing 90 Days of DevOps challenge 🙏
+You are empowering beginners like me every single day!
+
+🚀 More learning drops tomorrow — stay tuned!
+
+#DevOps #Linux #LogAnalysis #grep #awk #sed #ShellScripting #90DaysOfDevOps #ShubhamLondhe #TerminalLife #WomenInTech #LearningInPublic
