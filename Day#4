@@ -1,0 +1,67 @@
+# 🗂️ Volume Management & Disk Usage (Linux)
+
+> ✅ Week 2 • Day 4 of #90DaysOfDevOps
+
+This task focuses on understanding and practicing **volume mounting**, disk usage monitoring, and loop device simulation in a Linux environment — a core concept for DevOps engineers.
+
+---
+
+## 🧠 Task Objective
+
+- Create a directory to act as a mount point
+- Simulate a volume using a loopback device
+- Format and mount the volume
+- Verify the mount using system tools
+
+---
+
+## 📁 Steps Performed
+
+### 1. Create the Mount Point
+
+```bash
+sudo mkdir -p /mnt/devops_data
+2. Create a Simulated Volume (100MB)
+bash
+Copy
+Edit
+sudo dd if=/dev/zero of=/home/empdmin/devops_volume.img bs=100M count=1
+3. Format the Volume with ext4
+bash
+Copy
+Edit
+sudo mkfs.ext4 /home/empdmin/devops_volume.img
+4. Mount the Volume Using a Loop Device
+bash
+Copy
+Edit
+sudo mount -o loop /home/empdmin/devops_volume.img /mnt/devops_data
+5. Verify the Mount
+bash
+Copy
+Edit
+df -h | grep devops_data
+mount | grep devops_data
+📌 Output Example
+bash
+Copy
+Edit
+/dev/loop0       90M   24K   83M   1% /mnt/devops_data
+/home/empdmin/devops_volume.img on /mnt/devops_data type ext4 (rw,relatime)
+🙏 Special Thanks
+Huge appreciation to @Shubham Londhe for designing this powerful hands-on DevOps learning journey! 💡
+
+🏷️ Tags
+#DevOps #Linux #90DaysOfDevOps #VolumeManagement #LoopDevice #LearningByDoing
+
+yaml
+Copy
+Edit
+
+---
+
+You can name your repo something like:
+
+> `linux-volume-management`  
+> or  
+> `Week2-Day4-90DaysOfDevOps`
