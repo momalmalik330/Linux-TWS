@@ -1,0 +1,82 @@
+
+# 🚀 Day 5: Process Management & Monitoring — 90 Days of DevOps
+
+Today’s task was all about understanding how to **start**, **monitor**, and **terminate** processes in Linux using CLI tools like `ps`, `top`, `htop`, and `kill`.
+
+---
+
+## 🛠️ Task Summary
+
+### ✅ 1. Start a Background Process
+```bash
+ping google.com > ping_test.log &
+```
+- `&` runs it in the background
+- Output is redirected to `ping_test.log`
+- A process ID (PID) is returned
+
+### ✅ 2. Monitor the Process
+
+#### 🔹 Using `ps`:
+```bash
+ps aux | grep ping
+```
+
+#### 🔹 Using `top`:
+```bash
+top
+```
+
+#### 🔹 Using `htop` (optional, more visual):
+```bash
+sudo apt install htop
+htop
+```
+
+### ✅ 3. Kill the Process
+```bash
+sudo kill <PID>
+```
+In my case:
+```bash
+sudo kill 4709
+```
+
+✅ This safely stopped the `ping` process and freed system resources.
+
+---
+
+## 🧠 Why Do We Kill Background Processes?
+
+- They run indefinitely unless manually stopped
+- They can consume memory, CPU, or fill log files
+- Killing frees up system resources and avoids issues
+
+---
+
+## 🔍 Tools Used
+
+| Command | Purpose                            |
+|---------|-------------------------------------|
+| `ping`  | Sends test packets to a server      |
+| `&`     | Runs process in background          |
+| `ps`    | Lists currently running processes   |
+| `top`   | Real-time view of system activity   |
+| `htop`  | Interactive, user-friendly top      |
+| `kill`  | Terminates a process by its PID     |
+| `cat`   | Reads and displays log file content |
+
+---
+
+## 💡 Learnings
+
+- Mastered process creation and termination
+- Gained comfort with process monitoring tools
+- Understood system performance visibility
+
+---
+
+## 🙏 Special Thanks
+Big appreciation to **@Shubham Londhe** for the amazing #90DaysOfDevOps journey! 🎉
+
+---
