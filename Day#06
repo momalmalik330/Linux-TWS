@@ -1,0 +1,46 @@
+# 💾 Day 6 - Automate Backups with Shell Scripting (90 Days of DevOps)
+
+## ✅ Task Overview
+Automate backup of the `/devops_workspace` directory using a shell script and schedule it via cron.
+
+---
+
+## 🛠️ What I Did
+
+1. **Created a shell script** `/usr/local/bin/backup.sh`:
+   - Compresses `/devops_workspace` into a `.tar.gz` file named with today’s date.
+   - Saves the backup in `/backups`.
+   - Displays a success message in green color.
+
+2. **Made the script executable**:
+   ```bash
+   sudo chmod +x /usr/local/bin/backup.sh
+Scheduled the script using cron:
+
+crontab -e
+Then added:
+
+0 2 * * * /usr/local/bin/backup.sh
+💡 What I Learned
+Writing shell scripts using Bash.
+
+Using tar for archiving.
+
+Creating colored terminal output.
+
+Automating tasks with cron.
+
+📂 Sample Script
+
+#!/bin/bash
+
+SOURCE_DIR="/devops_workspace"
+BACKUP_DIR="/backups"
+DATE=$(date +%F)
+FILENAME="backup_${DATE}.tar.gz"
+
+mkdir -p "$BACKUP_DIR"
+tar -czf "$BACKUP_DIR/$FILENAME" "$SOURCE_DIR"
+
+echo -e "\e[32m✅ Backup created successfully: $BACKUP_DIR/$FILENAME\e[0m"
+
